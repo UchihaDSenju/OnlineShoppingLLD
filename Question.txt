@@ -1,0 +1,20 @@
+Online Shopping Application
+
+Create an Online Shopping application
+Modules:
+Interface 1:
+Admin should authenticated before using the software
+Admin can add their products in an ascending order
+Admin can generate a coupon code for any product 
+Can able to get the shopping history by various products
+Can able to check the quantities available in the stock of particular product 
+
+Interface 2 (User)
+User should be authenticated before using the software
+Can able to see the list of products 
+Can able to see the product by entering the product name 
+Can make the product as their wish list 
+Ordering the product 
+Cancel the order 
+Getting discount by entering the respective coupon code. 
+Amount payment
