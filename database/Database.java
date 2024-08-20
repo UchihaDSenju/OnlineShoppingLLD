@@ -8,6 +8,8 @@ public class Database {
     private ArrayList<Product> products = new ArrayList<>();
     private ArrayList<Product> transactions = new ArrayList<>();
     private ArrayList<Product> coupons = new ArrayList<>();
+    private ArrayList<User> users = new ArrayList<>();
+    
     private Database(){}
 
     public static Database getDatabaseInstance(){
