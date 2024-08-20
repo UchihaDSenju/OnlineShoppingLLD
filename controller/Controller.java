@@ -1,5 +1,6 @@
 package controller;
 import database.*;
+import model.*;
 public class Controller {
     private static volatile Controller controllerInstance = null;
     private Database db = Database.getDatabaseInstance();
@@ -15,9 +16,14 @@ public class Controller {
     }
 
 
-    public boolean checkLogin(int userId, String password){
-        if(db.getUser(userId) != null) return true;
-        return false;
+    public User checkLogin(String userName, String password){
+        User user = db.getUser(userName);
+        if(user!=null){
+            if(user.getPassword().equals(password)){
+                return user;
+            }
+        }
+        return null;
     }
 
     public boolean signUpUser(String uName, String name, String password){

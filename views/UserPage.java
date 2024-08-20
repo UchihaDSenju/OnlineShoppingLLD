@@ -6,13 +6,16 @@ import commons.Screen;
 
 public class UserPage extends Screen{
 
-    public UserPage(Scanner sc){
+    private String name;
+    public UserPage(Scanner sc, String name){
         super(sc);
+        this.name = name;
     }
 
     @Override
     public void runScreenLoop() {
-        print("User Page");
+        println("Hello Buddy\n");
+        println("Welecome" + name);
     }
     
 }

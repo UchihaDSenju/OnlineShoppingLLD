@@ -21,17 +21,17 @@ public class Database {
     }
 
     // Read
-    public User getUser(int userId){
+    public User getUser(String userName){
         for(User user : users){
-            if(user.getUserId() == userId){
+            if(user.getUserName().equals(userName)){
                 return user;
             }
         }
         return null;
     }
     // Write
-    public boolean createAccount(String uName, String name, String password){
-        users.add(new User(name, Type.CUSTOMER));
+    public boolean createAccount(String userName, String name, String password){
+        users.add(new User(userName, name, password, Type.CUSTOMER));
         return true;
     }
     
