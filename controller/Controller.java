@@ -15,7 +15,13 @@ public class Controller {
     }
 
 
-    public boolean checkLogin(String uName, String password){
-        return true;
+    public boolean checkLogin(int userId, String password){
+        if(db.getUser(userId) != null) return true;
+        return false;
     }
+
+    public boolean signUpUser(String uName, String name, String password){
+        return db.createAccount(uName, name, password);
+    }
+
 }

@@ -20,6 +20,7 @@ public abstract class Screen {
     }
 
     public static void startScreen(Screen screen){
+        screen.init();// To be Removed
         screen.runScreenLoop();
     }
 
@@ -28,4 +29,10 @@ public abstract class Screen {
     }
 
     public abstract void runScreenLoop();
+
+    protected void init(){
+        controller.signUpUser("tariq", "Tariq", "password");
+    }
+
+
 }

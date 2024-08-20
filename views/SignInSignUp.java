@@ -20,10 +20,11 @@ public class SignInSignUp extends Screen{
             switch(n){
                 case 1:
                     print("uName: ");
-                    String userName = sc.nextLine();
+                    int userId = sc.nextInt();
+                    sc.nextLine();
                     print("password");
                     String password = sc.nextLine();
-                    if(controller.checkLogin(userName, password)){
+                    if(controller.checkLogin(userId, password)){
                         moveToScreen(new UserPage(sc));
                     }
                     else{

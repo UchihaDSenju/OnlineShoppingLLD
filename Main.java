@@ -8,4 +8,5 @@ class Main{
             Screen.startScreen(new SignInSignUp(sc));
         }
     }
+
 }

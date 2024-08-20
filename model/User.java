@@ -1,15 +1,12 @@
 package model;
 
+import commons.Enums.Type;
+
 public class User {
     static int idGen = 7342;
     private int userId;
     private String userName;
     private Type holder;
-    
-    private enum Type{
-        CUSTOMER,
-        ADMIN
-    }
 
 
     public User(String userName, Type holder) {

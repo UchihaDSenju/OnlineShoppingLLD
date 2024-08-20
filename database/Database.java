@@ -1,6 +1,7 @@
 package database;
 import java.util.ArrayList;
 
+import commons.Enums.Type;
 import model.*;
 public class Database {
 
@@ -9,7 +10,7 @@ public class Database {
     private ArrayList<Product> transactions = new ArrayList<>();
     private ArrayList<Product> coupons = new ArrayList<>();
     private ArrayList<User> users = new ArrayList<>();
-    
+
     private Database(){}
 
     public static Database getDatabaseInstance(){
@@ -17,6 +18,21 @@ public class Database {
             databaseInstance = new Database();
         }
         return databaseInstance;
+    }
+
+    // Read
+    public User getUser(int userId){
+        for(User user : users){
+            if(user.getUserId() == userId){
+                return user;
+            }
+        }
+        return null;
+    }
+    // Write
+    public boolean createAccount(String uName, String name, String password){
+        users.add(new User(name, Type.CUSTOMER));
+        return true;
     }
     
 }
